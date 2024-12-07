@@ -1,4 +1,5 @@
-import React from 'react';
+
+import Daksh20 from "../Assets/Daksh20.jpg";
 
 export default function Story() {
   return (
@@ -8,7 +9,7 @@ export default function Story() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+              src={Daksh20}
               alt="Couple" 
               className="rounded-lg shadow-lg"
             />

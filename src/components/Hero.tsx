@@ -1,6 +1,6 @@
 import { Heart } from 'lucide-react';
 import dakshVideo from "../Assets/dakshVideo.mp4";
-import BadukinaBannave  from "../../audio/BadukinaBannave.mp3";
+
 
 export default function Hero() {
   return (
@@ -22,10 +22,9 @@ export default function Hero() {
     <source src={dakshVideo} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-  {/* <audio  autoplay>
-  <source src={BadukinaBannave}  type="audio/mp3"/>
-  Your browser does not support the audio tag.
-</audio> */}
+  <audio autoplay loop hidden>
+		<source src="../../audio/BadukinaBannave.mp3" type="audio/mp3"/>
+	</audio>
 
   {/* Overlay for darkening the background */}
   <div className="absolute inset-0 bg-black bg-opacity-50"></div>
