@@ -22,9 +22,9 @@ export default function Hero() {
     <source src={dakshVideo} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-  <audio autoplay loop hidden>
+  {/* <audio autoplay loop hidden>
 		<source src="../../audio/BadukinaBannave.mp3" type="audio/mp3"/>
-	</audio>
+	</audio> */}
 
   {/* Overlay for darkening the background */}
   <div className="absolute inset-0 bg-black bg-opacity-50"></div>
