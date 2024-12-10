@@ -13,7 +13,6 @@ import Daksh10 from "../Assets/Daksh10.jpeg";
 import Daksh11 from "../Assets/Daksh11.jpeg";
 import Daksh12 from "../Assets/Daksh12.jpeg";
 
-
 const images = [
   Daksh1,
   Daksh2,
@@ -43,9 +42,9 @@ export default function Gallery() {
 
   return (
     <div className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-4xl font-serif text-center mb-12">Our Memories</h2>
-        <div className="relative h-[1000px] rounded-lg overflow-hidden">
+        <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-[1000px] rounded-lg overflow-hidden">
           {images.map((image, index) => (
             <div
               key={index}
@@ -65,7 +64,7 @@ export default function Gallery() {
       </div>
 
       {selectedImage && (
-        <div className="modal" onClick={() => setSelectedImage(null)}>
+        <div className="modal fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center" onClick={() => setSelectedImage(null)}>
           <button
             className="absolute top-4 right-4 text-white hover:text-pink-400 transition-colors"
             onClick={() => setSelectedImage(null)}
