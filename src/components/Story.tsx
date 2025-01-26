@@ -16,7 +16,7 @@ export default function Story() {
           </div>
           <div className="flex items-center">
             <p className="text-gray-600 leading-relaxed">
-              We first met at a local coffee shop on a rainy Sunday morning. What started as a chance encounter turned into hours of conversation, laughter, and an undeniable connection. Three years later, on that same rainy Sunday, Michael proposed at our favorite spot in Central Park. Every day since has been filled with more love than we could have ever imagined.
+          Two strangers, bound by family ties, discover unexpected companionship. Through shared laughter, late-night talks, and small acts of care, their arranged marriage blossoms into a love story neither saw coming—a bond stronger than fate.
             </p>
           </div>
         </div>
