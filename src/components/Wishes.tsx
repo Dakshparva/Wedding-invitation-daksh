@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Heart } from 'lucide-react';
+import { Heart, Trash } from 'lucide-react';
 
 interface Wish {
   name: string;
   message: string;
-  timestamp: string;
+  timestamp: string; // Stored as a string for localStorage compatibility
 }
 
 export default function Wishes() {
@@ -35,6 +35,7 @@ export default function Wishes() {
     }
   }, [wishes.length]);
 
+  // Handle adding a new wish
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newWish.name && newWish.message) {
@@ -48,11 +49,19 @@ export default function Wishes() {
     }
   };
 
+  // Handle deleting a wish
+  const handleDelete = (index: number) => {
+    const updatedWishes = wishes.filter((_, i) => i !== index);
+    setWishes(updatedWishes);
+    localStorage.setItem('wedding_wishes', JSON.stringify(updatedWishes));
+  };
+
   return (
     <div className="py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-serif text-center mb-12">Wedding Wishes</h2>
-        
+
+        {/* Wish Form */}
         <form onSubmit={handleSubmit} className="mb-12">
           <div className="space-y-4">
             <input
@@ -77,6 +86,7 @@ export default function Wishes() {
           </div>
         </form>
 
+        {/* Wishes Display */}
         <div className="relative min-h-[200px]">
           {wishes.length > 0 && (
             <div className="relative bg-white p-8 rounded-lg shadow-lg">
@@ -94,6 +104,13 @@ export default function Wishes() {
                     <span className="text-sm text-gray-500 block mt-4">
                       {new Date(wish.timestamp).toLocaleDateString()}
                     </span>
+                    {/* Delete Button */}
+                    <button
+                      onClick={() => handleDelete(index)}
+                      className="mt-4 text-red-500 hover:text-red-700 transition-colors flex items-center justify-center mx-auto"
+                    >
+                      <Trash className="w-5 h-5 mr-1" /> Delete
+                    </button>
                   </div>
                 </div>
               ))}
