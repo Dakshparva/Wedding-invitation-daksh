@@ -4,7 +4,7 @@ import { Heart, Trash } from 'lucide-react';
 interface Wish {
   name: string;
   message: string;
-  timestamp: string; // Stored as a string for localStorage compatibility
+  timestamp: string;
 }
 
 export default function Wishes() {
@@ -49,7 +49,7 @@ export default function Wishes() {
     }
   };
 
-  // Handle deleting a wish
+
   const handleDelete = (index: number) => {
     const updatedWishes = wishes.filter((_, i) => i !== index);
     setWishes(updatedWishes);
@@ -86,7 +86,6 @@ export default function Wishes() {
           </div>
         </form>
 
-        {/* Wishes Display */}
         <div className="relative min-h-[200px]">
           {wishes.length > 0 && (
             <div className="relative bg-white p-8 rounded-lg shadow-lg">
@@ -104,7 +103,6 @@ export default function Wishes() {
                     <span className="text-sm text-gray-500 block mt-4">
                       {new Date(wish.timestamp).toLocaleDateString()}
                     </span>
-                    {/* Delete Button */}
                     <button
                       onClick={() => handleDelete(index)}
                       className="mt-4 text-red-500 hover:text-red-700 transition-colors flex items-center justify-center mx-auto"
