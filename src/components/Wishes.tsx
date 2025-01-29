@@ -4,7 +4,7 @@ import { Heart } from 'lucide-react';
 interface Wish {
   name: string;
   message: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
 export default function Wishes() {
@@ -12,12 +12,25 @@ export default function Wishes() {
   const [newWish, setNewWish] = useState({ name: '', message: '' });
   const [currentWishIndex, setCurrentWishIndex] = useState(0);
 
+  // Load wishes from localStorage on mount
+  useEffect(() => {
+    const savedWishes = localStorage.getItem('wedding_wishes');
+    if (savedWishes) {
+      setWishes(JSON.parse(savedWishes));
+    }
+  }, []);
+
+  // Update localStorage whenever wishes change
+  useEffect(() => {
+    localStorage.setItem('wedding_wishes', JSON.stringify(wishes));
+  }, [wishes]);
+
+  // Auto-slide wishes
   useEffect(() => {
     if (wishes.length > 0) {
       const timer = setInterval(() => {
         setCurrentWishIndex((prevIndex) => (prevIndex + 1) % wishes.length);
       }, 2000);
-
       return () => clearInterval(timer);
     }
   }, [wishes.length]);
@@ -25,10 +38,12 @@ export default function Wishes() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newWish.name && newWish.message) {
-      setWishes([
+      const updatedWishes = [
         ...wishes,
-        { ...newWish, timestamp: new Date() }
-      ]);
+        { ...newWish, timestamp: new Date().toISOString() }
+      ];
+      setWishes(updatedWishes);
+      localStorage.setItem('wedding_wishes', JSON.stringify(updatedWishes));
       setNewWish({ name: '', message: '' });
     }
   };
@@ -77,7 +92,7 @@ export default function Wishes() {
                     <h3 className="font-semibold text-xl text-pink-600 mb-2">{wish.name}</h3>
                     <p className="text-gray-600 italic">"{wish.message}"</p>
                     <span className="text-sm text-gray-500 block mt-4">
-                      {wish.timestamp.toLocaleDateString()}
+                      {new Date(wish.timestamp).toLocaleDateString()}
                     </span>
                   </div>
                 </div>
