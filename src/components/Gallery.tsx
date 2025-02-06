@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import Daksh1 from "../Assets/Daksh1.jpeg";
 import Daksh2 from "../Assets/Daksh2.jpeg";
 import Daksh3 from "../Assets/Daksh3.jpeg";
 import Daksh4 from "../Assets/Daksh4.jpeg";
 import Daksh5 from "../Assets/Daksh5.jpeg";
-import Daksh6 from "../Assets/Daksh6.jpeg";
-import Daksh7 from "../Assets/Daksh7.jpeg";
-import Daksh8 from "../Assets/Daksh8.jpeg";
-import Daksh9 from "../Assets/Daksh9.jpeg";
-import Daksh10 from "../Assets/Daksh10.jpeg";
-import Daksh11 from "../Assets/Daksh11.jpeg";
-import Daksh12 from "../Assets/Daksh12.jpeg";
+import ethnic1 from "../Assets/ethnic1.jpeg";
+import ethnic2 from "../Assets/ethnic2.jpeg";
+import ethnic4 from "../Assets/ethnic4.jpeg";
+import ethnic8 from "../Assets/ethnic8.jpeg";
+import ethnic11 from "../Assets/ethnic11.jpeg";
+import ethnic12 from "../Assets/ethnic12.jpeg";
+import gown1 from "../Assets/gown1.jpeg";
+import gown2 from "../Assets/gown2.jpeg";
+import gown3 from "../Assets/gown3.jpeg";
+import image8 from "../Assets/image 8.jpeg";
+import image3 from "../Assets/image3.jpeg";
+import whiteimage18 from "../Assets/white image 18.jpeg";
+import whiteimage from "../Assets/white image.jpeg";
+import whiteimage11 from "../Assets/white image11.jpeg";
+import whiteimage20 from "../Assets/white image20.jpeg";
+import whiteimage12 from "../Assets/white image12.jpeg";
 
 const images = [
   Daksh1,
@@ -19,13 +28,22 @@ const images = [
   Daksh3,
   Daksh4,
   Daksh5,
-  Daksh6,
-  Daksh7,
-  Daksh8,
-  Daksh9,
-  Daksh10,
-  Daksh11,
-  Daksh12,
+  ethnic1,
+  ethnic2,
+  ethnic4,
+  ethnic8,
+  ethnic11,
+  ethnic12,
+  whiteimage18,
+  whiteimage,
+  gown1,
+  gown2,
+  gown3,
+  image8,
+  image3,
+  whiteimage11,
+  whiteimage20,
+  whiteimage12
 ];
 
 export default function Gallery() {
