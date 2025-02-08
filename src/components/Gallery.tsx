@@ -62,19 +62,20 @@ export default function Gallery() {
     <div className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-4xl font-serif text-center mb-12">Our Memories</h2>
-        <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-[1000px] rounded-lg overflow-hidden">
+        <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-[1000px] rounded-lg overflow-hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer ${
+              className={`relative transition-opacity duration-1000 cursor-pointer ${
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+              } flex justify-center items-center`}
               onClick={() => setSelectedImage(image)}
             >
               <img
                 src={image}
                 alt={`Memory ${index + 1}`}
                 className="w-full h-full object-cover"
+                style={{ objectFit: 'cover' }}
               />
             </div>
           ))}
@@ -92,8 +93,7 @@ export default function Gallery() {
           <img
             src={selectedImage}
             alt="Full size"
-             className="w-full h-full object-cover"
-            style={{ objectFit: 'cover' }}
+            className="max-w-[90vw] max-h-[90vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
