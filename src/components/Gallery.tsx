@@ -92,7 +92,8 @@ export default function Gallery() {
           <img
             src={selectedImage}
             alt="Full size"
-            className="max-w-[90vw] max-h-[90vh] object-contain"
+             className="w-full h-full object-cover"
+            style={{ objectFit: 'cover' }}
             onClick={(e) => e.stopPropagation()}
           />
         </div>
