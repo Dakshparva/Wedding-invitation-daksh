@@ -12,9 +12,10 @@ import ethnic4 from "../Assets/ethnic4.jpeg";
 import ethnic8 from "../Assets/ethnic8.jpeg";
 import ethnic11 from "../Assets/ethnic11.jpeg";
 import ethnic12 from "../Assets/ethnic12.jpeg";
-import gown1 from "../Assets/gown1.jpeg";
-import gown2 from "../Assets/gown2.jpeg";
+import gown5 from "../Assets/gown5.jpeg";
+import gown6 from "../Assets/gown6.jpeg";
 import gown3 from "../Assets/gown3.jpeg";
+import gown8 from "../Assets/gown8.jpeg";
 import image8 from "../Assets/image 8.jpeg";
 import image3 from "../Assets/image3.jpeg";
 import whiteimage18 from "../Assets/white image 18.jpeg";
@@ -37,9 +38,10 @@ const images = [
   ethnic12,
   whiteimage18,
   whiteimage,
-  gown1,
-  gown2,
   gown3,
+  gown5,
+  gown6,
+  gown8,
   image8,
   image3,
   whiteimage11,
