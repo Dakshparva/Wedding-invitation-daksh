@@ -13,7 +13,7 @@ import ethnic8 from "../Assets/ethnic8.jpeg";
 import ethnic11 from "../Assets/ethnic11.jpeg";
 import ethnic12 from "../Assets/ethnic12.jpeg";
 import gown5 from "../Assets/gown5.jpeg";
-import gown6 from "../Assets/gown6.jpeg";
+import gown7 from "../Assets/gown7.jpeg";
 import gown3 from "../Assets/gown3.jpeg";
 import gown8 from "../Assets/gown8.jpeg";
 import image8 from "../Assets/image 8.jpeg";
@@ -40,7 +40,7 @@ const images = [
   whiteimage,
   gown3,
   gown5,
-  gown6,
+  gown7,
   gown8,
   image8,
   image3,
