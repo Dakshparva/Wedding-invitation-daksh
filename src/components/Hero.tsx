@@ -21,7 +21,7 @@ export default function Hero() {
   >
     <source src={dakshVideo} type="video/mp4" />
     Your browser does not support the video tag.
-  </video>
+  </video> 
   {/* <audio autoplay loop hidden>
 		<source src="../../audio/BadukinaBannave.mp3" type="audio/mp3"/>
 	</audio> */}
