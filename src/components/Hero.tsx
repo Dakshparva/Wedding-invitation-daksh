@@ -35,8 +35,8 @@ export default function Hero() {
     <h1 className="text-6xl font-serif mb-2">Dakshath & Varshitha</h1>
     <p className="text-4xl font-serif mb-2">We Are Getting Married</p>
     <div className="text-2xl font-light">
-      <p className="text-2xl font-serif mb-2">February 22, 2025 Reception :7pm onwards</p>
-      <p className="text-2xl font-serif mb-2">February 23, 2025 Dhara muhurtha:10am to 10:30am</p>
+      <p className="text-2xl font-serif mb-2">February 22, 2025 <br/> Reception :7pm onwards</p>
+      <p className="text-2xl font-serif mb-2">February 23, 2025 <br/> Dhara muhurtha:10am to 10:30am</p>
       <p className="text-2xl font-serif mb-2">Nikitha Bojegowda Marriage Hall</p>
       <p className="text-2xl font-serif mb-2">3/4, KC Layout, Mysuru, Karnataka-570011</p>
     </div>
